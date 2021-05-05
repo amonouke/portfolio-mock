@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_18_103141) do
+ActiveRecord::Schema.define(version: 2021_05_05_100634) do
+
+  create_table "ownerinfos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.text "top_image"
+    t.string "street_address"
+    t.string "nearest_station"
+    t.string "phone_number"
+    t.string "opening_hours"
+    t.string "closing_time"
+    t.string "regular_holiday"
+    t.string "thing_about_business_hours"
+    t.string "homepage"
+    t.text "store_image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "owners", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
