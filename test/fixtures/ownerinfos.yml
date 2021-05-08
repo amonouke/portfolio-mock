@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  top_image: MyText
+  street_address: MyString
+  nearest_station: MyString
+  phone_number: MyString
+  opening_hours: MyString
+  closing_time: MyString
+  regular_holiday: MyString
+  thing_about_business_hours: MyString
+  homepage: MyString
+  store_image: MyText
+
+two:
+  top_image: MyText
+  street_address: MyString
+  nearest_station: MyString
+  phone_number: MyString
+  opening_hours: MyString
+  closing_time: MyString
+  regular_holiday: MyString
+  thing_about_business_hours: MyString
+  homepage: MyString
+  store_image: MyText

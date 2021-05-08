@@ -1,0 +1,7 @@
+<%= form_tag("/ownersinfo/create") do %>
+    <p>住所</p>
+    <input name="street_address" value="<%= @ownersinfo.street_address %>">
+    <p>最寄駅</p>
+    <input name="nearest_station" value="<%= @ownersinfo.nearest_station %>">
+    <input type="submit" value="新規登録">
+<% end %>
