@@ -5,14 +5,20 @@ class Owners::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+   def new
+     super
+   end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+   def create
+     super
+     #Userの子要素であるownerinfoを関連付ける
+     resource.build_ownerinfo
+     #同時につくられるオーナー店舗の登録内容
+     resource.ownerinfo.top_image = "default_ownersinfo.jpg" #初期画像
+     #owner_idは自動生成
+     resource.save
+   end
 
   # GET /resource/edit
   # def edit

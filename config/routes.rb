@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   
-  get 'ownersinfo/home/:id' => "ownersinfo#home"
+  root "home#top"
+  get 'ownersinfo/:id/home' => "ownersinfo#home"
   get "ownersinfo/new" => "ownersinfo#new"
-  post "ownersinfo/create" => "ownersinfo#create"
+  get "ownersinfo/:id/edit" => "ownersinfo#edit"
+  post "ownersinfo/:id/update" => "ownersinfo#update"
   get "home/top" => "home#top"
 
   devise_for :owners, controllers: {

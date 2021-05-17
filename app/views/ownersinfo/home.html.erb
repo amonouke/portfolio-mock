@@ -1,7 +1,14 @@
 <h1>Ownersinfo#home</h1>
 <p>Find me in app/views/ownersinfo/home.html.erb</p>
 
+<img src="<%= "/ownersinfo_top/#{@ownersinfo.top_image}"%>">
+<p>店舗名 <%= @ownersinfo.store_name %></p>
 <p>住所 <%= @ownersinfo.street_address %></p>
 <p>最寄駅 <%= @ownersinfo.nearest_station %></p>
-
+<p>電話番号 <%= @ownersinfo.phone_number %></p>
+<p>open <%= @ownersinfo.opening_hours %></p>
+<p>close <%= @ownersinfo.closing_time %></p>
+<p>定休日　<%= @ownersinfo.regular_holiday %></p>
+<p>営業時間その他 <%= @ownersinfo.thing_about_business_hours %></p>
+<p>ホームページ <%= @ownersinfo.homepage %></p>
 

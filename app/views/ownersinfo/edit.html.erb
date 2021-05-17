@@ -1,0 +1,24 @@
+<!-- オーナー情報の登録・編集　-->
+<%= form_tag("/ownersinfo/#{@ownersinfo.owner_id}/update", {multipart: true}) do %>
+    <p>トップ画像</p>
+    <input name="image" type="file">
+    <p>店舗名</p>
+    <input name="store_name" value="<%= @ownersinfo.store_name %>">
+    <p>住所</p>
+    <input name="street_address" value="<%= @ownersinfo.street_address %>">
+    <p>最寄駅</p>
+    <input name="nearest_station" value="<%= @ownersinfo.nearest_station %>">
+    <p>電話番号</p>
+    <input name="phone_number" value="<%= @ownersinfo.phone_number %>">
+    <p>open</p>
+    <input name="opening_hours" value="<%= @ownersinfo.opening_hours %>">
+    <p>close</p>
+    <input name="closing_time" value="<%= @ownersinfo.closing_time %>">
+    <p>定休日</p>
+    <input name="regular_holiday" value="<%= @ownersinfo.regular_holiday %>">
+    <p>営業時間その他</p>
+    <input name="thing_about_business_hours" value="<%= @ownersinfo.thing_about_business_hours %>">
+    <p>ホームページ</p>
+    <input name="homepage" value="<%= @ownersinfo.homepage %>">
+    <input type="submit" value="店舗情報変更">
+<% end %>
