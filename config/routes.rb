@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "ownersinfo/new" => "ownersinfo#new"
   get "ownersinfo/:id/edit" => "ownersinfo#edit"
   post "ownersinfo/:id/update" => "ownersinfo#update"
+  post "ownersinfo/:id/reset_image" => "ownersinfo#reset_image"
   get "home/top" => "home#top"
 
   devise_for :owners, controllers: {

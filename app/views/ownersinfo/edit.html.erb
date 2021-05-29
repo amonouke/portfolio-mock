@@ -20,5 +20,13 @@
     <input name="thing_about_business_hours" value="<%= @ownersinfo.thing_about_business_hours %>">
     <p>ホームページ</p>
     <input name="homepage" value="<%= @ownersinfo.homepage %>">
+    <p>店内画像1</p>
+    <input name="image01" type="file">
+    <p>店内画像2</p>
+    <input name="image02" type="file">
+    <p>店内画像3</p>
+    <input name="image03" type="file">
+    <p>店内画像4</p>
+    <input name="image04" type="file">  <%= link_to("店内画像のリセット", "/ownersinfo/#{@ownersinfo.owner_id}/reset_image", {method: :post}) %>
     <input type="submit" value="店舗情報変更">
 <% end %>

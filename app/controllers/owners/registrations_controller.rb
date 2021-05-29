@@ -16,6 +16,10 @@ class Owners::RegistrationsController < Devise::RegistrationsController
      resource.build_ownerinfo
      #同時につくられるオーナー店舗の登録内容
      resource.ownerinfo.top_image = "default_ownersinfo.jpg" #初期画像
+     resource.ownerinfo.store_image01 = "default_ownersinfo.jpg" #初期画像
+     resource.ownerinfo.store_image02 = "default_ownersinfo.jpg" #初期画像
+     resource.ownerinfo.store_image03 = "default_ownersinfo.jpg" #初期画像
+     resource.ownerinfo.store_image04 = "default_ownersinfo.jpg" #初期画像
      #owner_idは自動生成
      resource.save
    end
