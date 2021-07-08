@@ -11,14 +11,33 @@
   </head>
 
   <body>
-  　　<header>
-      ボードゲームカフェの検索
-      ログイン
-      新規登録
-      （オーナー、店舗の方はこちら）
+  　<header>
+      <li>
+      <%= link_to "ボードゲームカフェの検索", "/home/search" %> <!-- 検索画面に移行する -->
+      </li>
+      <li>
+        <%= link_to "ログイン", new_user_session_path, class: 'post' %> <!-- ログイン画面に移行する -->
+      </li>
+      <li>
+        <%= link_to "新規登録", new_user_registration_path, class: 'post' %> <!-- 新規登録画面に移行する -->
+      </li>
+      <li>
+        （オーナー、店舗の方は<%= link_to "こちら", new_owner_registration_path, class: 'post' %>） <!-- オーナーの新規登録画面に移行する -->
+      </li>
+      <%= link_to "ログアウト", destroy_owner_session_path, method: :delete %>
+      
   　　</header>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     <%= yield %>
+
+    <footer>
+    <li>
+      <%= link_to "トップ", "/home/top" %> <!-- トップ画面に移行する -->
+    </li>
+    <li>
+      お問い合わせ
+    </li>
+    </footer>
   </body>
 </html>

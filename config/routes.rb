@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post "ownersinfo/:id/update" => "ownersinfo#update"
   post "ownersinfo/:id/reset_image" => "ownersinfo#reset_image"
   get "home/top" => "home#top"
+  get "home/search" => "home#search"
+  get "home/keyword_search" => "home#keyword_search"
 
   devise_for :owners, controllers: {
     sessions:      'owners/sessions',

@@ -66,8 +66,9 @@ class OwnersinfoController < ApplicationController
     else
       render("ownersinfo/edit")
     end
-
   end
+
+
   
   #def create
     #@owner = Owner.new(owner_params)

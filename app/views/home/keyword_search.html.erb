@@ -1,0 +1,8 @@
+<!-- 検索結果一覧の表示 -->
+<% @ownersinfo.each do |ownersinfo| %>
+  <p><%= ownersinfo.store_name %></p>
+<% end %>
+<!-- 検索結果がない場合 -->
+<% if @ownersinfo.size == 0 %>
+ <p>検索結果がありませんでした</p>
+<% end %>

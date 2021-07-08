@@ -1,0 +1,7 @@
+<p>現在地から検索（googlemap導入後作成）</p>
+<p>都道府県から検索（プルダウンできるようにする）</p>
+
+<%= form_with url: home_keyword_search_path, method: :get, local: true do |form| %>
+  キーワードから検索<%= form.text_field :search %>
+  <%= form.submit 'Search', name: nil %>
+<% end %>
